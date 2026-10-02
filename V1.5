@@ -1,0 +1,22 @@
+#VERSION 1
+somme=0
+s_coeff =0
+for i in range(101, 116):
+    
+    note = float(input("Quelle est la moyenne de la ressource R{}?".format(i)))
+    coef = int(input("Quel est le coefficient pour la ressource Rf{}? "format(i)))
+    
+    somme += note * coef
+    s_coeff += coef
+    
+for i in range(12, 17):
+    
+    n_sae = float (input("Quelle est la moyenne de la SAE{} ? ".format(i)))
+    c_sae = int(input("Quel est le coefficient pour la SAEC{} ? ".format(i)))
+    
+    somme += n_sae * c_sae
+    s_coeff += c_sae
+    
+if s_coeff!= 0:
+   m = somme / s_coeff
+   print(f"Moyenne : {m:.2f}")
